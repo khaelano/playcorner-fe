@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+    /* override default fonts */
+    --font-sans: "DM Sans", "sans-serif";
+
+    /* primary */
+    --color-primary-100: #ccd3da;
+    --color-primary-200: #99a8b5;
+    --color-primary-300: #667c90;
+    --color-primary-400: #33516b;
+    --color-primary-500: #002647;
+    --color-primary-600: #001e38;
+    --color-primary-700: #00162a;
+    --color-primary-800: #000f1c;
+    --color-primary-900: #00070e;
+
+    /* secondary */
+    --color-secondary-100: #fbe6d2;
+    --color-secondary-200: #f7cda5;
+    --color-secondary-300: #f3b478;
+    --color-secondary-400: #ef9b4b;
+    --color-secondary-500: #ec831e;
+    --color-secondary-600: #bc6818;
+    --color-secondary-700: #8d4e12;
+    --color-secondary-800: #5e340b;
+    --color-secondary-900: #2f1a05;
+
+    /* monochromatic */
+    --color-monochromatic-100: #fdfdfd;
+    --color-monochromatic-200: #fbfbfb;
+    --color-monochromatic-300: #f9f9f9;
+    --color-monochromatic-400: #f7f7f7;
+    --color-monochromatic-500: #f5f5f5;
+    --color-monochromatic-600: #c4c4c4;
+    --color-monochromatic-700: #939393;
+    --color-monochromatic-800: #616161;
+    --color-monochromatic-900: #303030;
+}
+@utility scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
