@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useGlobalStore } from "../store";
+import { Redirect } from "wouter";
 
 export default function LoginPage() {
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const login = useGlobalStore((e) => e.login);
+  const authStatus = useGlobalStore((e) => e.authStatus);
+
+  if (authStatus === "authenticated") return <Redirect to="/home" />;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

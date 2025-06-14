@@ -131,8 +131,8 @@ export const handlers = [
     never,
     LoginBody,
     ResponseBody<TokenCarrier | ApiError>,
-    "http://api.test.test/login"
-  >("http://api.test.test/login", async ({ request }) => {
+    "http://api.test.test/auth/login"
+  >("http://api.test.test/auth/login", async ({ request }) => {
     const { identifier, password } = await request.json();
     if (identifier !== "test" || password !== "test") {
       return errorResponse(401);

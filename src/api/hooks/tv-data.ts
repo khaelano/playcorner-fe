@@ -21,7 +21,7 @@ export function useTvInfo(
       setFetchStatus("inactive");
       setTvInfo(null);
     }
-    setFetchStatus("fetching");
+    setFetchStatus("onprogress");
     client
       .get<ResponseBody<TV | ApiError>>(`/tvs/${tvId}/reservations`)
       .then((res) => {
@@ -72,7 +72,7 @@ export function useGameCornerInfo(
   client: AxiosInstance,
 ): [GameCornerInfo | null, RequestStatus, () => void] {
   const [gcInfo, setGcInfo] = useState<GameCornerInfo | null>(null);
-  const [fetchStatus, setFetchStatus] = useState<RequestStatus>("fetching");
+  const [fetchStatus, setFetchStatus] = useState<RequestStatus>("onprogress");
 
   const fetchData = useCallback(() => {
     client
