@@ -12,6 +12,9 @@ jobs:
   build:
     name: "Build Docker Image from Main Branch"
     runs-on: "ubuntu-24.04"
+    env:
+      VITE_API_HOST: https://api-playcorner.bccdev.id/api
+      NODE_ENV: production
     steps:
       - name: "Checkout the Repository"
         uses: actions/checkout@v4
